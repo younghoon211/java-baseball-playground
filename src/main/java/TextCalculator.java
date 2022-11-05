@@ -10,4 +10,24 @@ public class TextCalculator {
 
         return result;
     }
+
+    public int calculate(int a, char operator, int b) {
+        if (operator == '+') {
+            return plus(a, b);
+        }
+
+        if (operator == '-') {
+            return minus(a, b);
+        }
+
+        if (operator == '*') {
+            return multiply(a, b);
+        }
+
+        if (operator == '/') {
+            return divide(a, b);
+        }
+
+        return 0;
+    }
 }
