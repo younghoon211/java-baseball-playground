@@ -50,4 +50,8 @@ public class TextCalculator {
 
         return a / b;
     }
+
+    public int toInt(String str) {
+        return Integer.parseInt(str);
+    }
 }
