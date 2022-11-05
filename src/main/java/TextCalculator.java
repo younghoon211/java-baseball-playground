@@ -58,4 +58,15 @@ public class TextCalculator {
     public String[] splitString(String str) {
         return str.split(" ");
     }
+
+    public String textInput() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("연산을 입력하세요(ex:3 * 2 + 1 - 5).");
+        System.out.print(": ");
+
+        String str = scanner.nextLine();
+
+        return str;
+    }
 }
