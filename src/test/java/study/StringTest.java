@@ -27,4 +27,14 @@ public class StringTest {
         String actual = "(1,2)".substring(1, 4);
         assertThat(actual).isEqualTo("1,2");
     }
+
+    @Test
+    @DisplayName("예외 발생시키기, charAt메소드 활용하기")
+    void charAt2() {
+        String actual = "abc";
+
+        assertThatThrownBy(() -> actual.charAt(4))
+                .isInstanceOf(StringIndexOutOfBoundsException.class)
+                .hasMessageContaining("String index out of range: 4");
+    }
 }
