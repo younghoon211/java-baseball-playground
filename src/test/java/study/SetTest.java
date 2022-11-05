@@ -35,4 +35,10 @@ public class SetTest {
     void contains(int values) {
         assertTrue(values > 0 && values < 4);
     }
+
+    @ParameterizedTest
+    @CsvSource(value = {"1:true", "2:true", "3:true", "4:false", "5:false"}, delimiter = ':')
+    void csv(int input, Boolean expected) {
+        assertThat(numbers.contains(input)).isEqualTo(expected);
+    }
 }
