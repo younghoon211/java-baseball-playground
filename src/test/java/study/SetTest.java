@@ -29,4 +29,10 @@ public class SetTest {
     void size() {
         assertThat(numbers.size()).isEqualTo(3);
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 3})
+    void contains(int values) {
+        assertTrue(values > 0 && values < 4);
+    }
 }
