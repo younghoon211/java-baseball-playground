@@ -54,4 +54,8 @@ public class TextCalculator {
     public int toInt(String str) {
         return Integer.parseInt(str);
     }
+
+    public String[] splitString(String str) {
+        return str.split(" ");
+    }
 }
